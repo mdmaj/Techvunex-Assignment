@@ -224,6 +224,14 @@ Only an authenticated admin can create products.
 
 ## Deployment
 
+### Current Production URLs
+
+```text
+Frontend: https://techvunex-assignment.vercel.app
+Backend:  https://techvunex-api.onrender.com
+API:      https://techvunex-api.onrender.com/api
+```
+
 ### Backend on Render
 
 Create a Render Web Service connected to the repository:
@@ -249,16 +257,16 @@ EMAIL_PASS=<gmail-app-password>
 
 Render provides its own `PORT`; the backend already reads `process.env.PORT`.
 
-After deployment, the backend URL will look like:
+The deployed backend URL is:
 
 ```text
-https://your-backend-name.onrender.com
+https://techvunex-api.onrender.com
 ```
 
 Test the public endpoint:
 
 ```text
-https://your-backend-name.onrender.com/api/products
+https://techvunex-api.onrender.com/api/products
 ```
 
 ### Frontend on Vercel
@@ -276,10 +284,19 @@ Install Command: npm install
 Add this Vercel environment variable:
 
 ```env
-VITE_API_URL=https://your-backend-name.onrender.com/api
+VITE_API_URL=https://techvunex-api.onrender.com/api
 ```
 
 Redeploy after changing environment variables.
+
+The backend allows requests from:
+
+```text
+http://localhost:5173
+https://techvunex-assignment.vercel.app
+```
+
+If the Vercel domain changes, update the allowed origin in `backend/server.js` and redeploy Render.
 
 For React Router direct URLs, add `frontend/vercel.json` if needed:
 
