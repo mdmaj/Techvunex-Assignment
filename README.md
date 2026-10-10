@@ -35,7 +35,7 @@ Technuvex/
 
 ## Requirements
 
-- Node.js 20 or newer
+- Node.js
 - npm
 - MongoDB Atlas or a local MongoDB instance
 - Gmail account with 2-Step Verification and an App Password for OTP email
