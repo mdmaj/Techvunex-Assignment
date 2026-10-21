@@ -362,6 +362,7 @@ Check:
 2. The Render service is running.
 3. MongoDB Atlas allows the Render service to connect.
 4. The browser is not using an old Vercel deployment.
+5. 
 
 ### Render service is slow on the first request
 
@@ -375,3 +376,4 @@ Free Render services may sleep after inactivity. The first request can take seve
 - Keep `.env` files out of Git.
 - Never add `ADMIN_PASS`, `EMAIL_PASS`, or `MONGO_URI` to frontend variables.
 - Restrict MongoDB Atlas network access for production where practical.
+- 
